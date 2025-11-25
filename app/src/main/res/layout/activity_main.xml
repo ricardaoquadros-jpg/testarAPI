@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- EditTexts -->
+    <EditText
+        android:id="@+id/editNome"
+        android:hint="NOME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editTelefone"
+        android:hint="TELEFONE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:hint="EMAIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Linha com ID + NOVO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editId"
+            android:hint="ID"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnNovo"
+            android:text="NOVO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Botões de ação -->
+    <Button
+        android:id="@+id/btnInserir"
+        android:text="INSERIR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnAtualizar"
+        android:text="ATUALIZAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnDeletar"
+        android:text="DELETAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:text="BUSCAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Botões SALVAR e EXCLUIR (página 2 do PDF) -->
+    <Button
+        android:id="@+id/btnSalvar"
+        android:text="SALVAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnExcluir"
+        android:text="EXCLUIR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- LISTVIEW para mostrar contatos -->
+    <ListView
+        android:id="@+id/listViewContatos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

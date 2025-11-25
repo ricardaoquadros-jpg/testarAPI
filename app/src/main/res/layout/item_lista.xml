@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Alterar layout para LinearLayout
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--
+        Os componentes abaixo podem ser inseridos através do Design.
+        O TextView para o ID colocamos altura e largura como 0dp
+        para não ficar visível.
+    -->
+    <TextView
+        android:id="@+id/itemId"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/itemNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOME"
+        android:textColor="#FF0000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/itemTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TELEFONE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/itemEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMAIL"
+        android:textColor="#0000FF"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+</LinearLayout>
