@@ -95,8 +95,11 @@ testarAPI/
 O aplicativo se conecta diretamente ao backend hospedado em servidor local (XAMPP) ou rede interna, consumindo endpoints como:
 
 GET /view/read.php?nome=
+
 POST /view/create.php
+
 PUT /view/update.php
+
 DELETE /view/delete.php?id=
 
 
