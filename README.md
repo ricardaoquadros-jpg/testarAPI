@@ -53,6 +53,54 @@ O desenvolvimento foi assistido e refinado com **ChatGPT 5.1** e **Gemini 3 Pro*
 - Gemini 3 Pro (refinamento de fluxos e correções)  
 - Git & GitHub  
 
+## 🧩 Arquitetura do Sistema
+
+```mermaid
+flowchart TB
+
+    %% --- CAMADAS ---
+
+    subgraph APP["📱 Aplicativo Android (Java/Kotlin)"]
+        A1["MainActivity.java\n• Lê campos\n• Envia requisições\n• Atualiza UI"]
+        A2["Volley HTTP Client\nGET / POST / PUT / DELETE"]
+        A3["ListView + Adapter\nExibe contatos retornados da API"]
+    end
+
+    subgraph API["🖥 Backend PHP (cadastro43TI)"]
+        B1["read.php\n🔎 Busca contatos"]
+        B2["create.php\n➕ Inserção"]
+        B3["update.php\n✏️ Atualização"]
+        B4["delete.php\n🗑 Remoção"]
+        B5["ContatosDAO.class.php\nAcesso ao banco (PDO)"]
+        B6["Conexao.class.php\nConexão MySQL"]
+    end
+
+    subgraph DB["🗄 Banco de Dados MySQL"]
+        C1["Tabela: contatos\n(id, nome, telefone, email)"]
+    end
+
+
+    %% --- FLUXO DE REQUISIÇÕES ---
+
+    A1 --> A2
+
+    %% GET
+    A2 -- GET /read.php?nome= --> B1
+    B1 --> B5 --> B6 --> C1
+    C1 --> B1 --> A3
+
+    %% POST
+    A2 -- POST /create.php --> B2
+    B2 --> B5 --> B6 --> C1
+
+    %% PUT
+    A2 -- PUT /update.php --> B3
+    B3 --> B5 --> B6 --> C1
+
+    %% DELETE
+    A2 -- DELETE /delete.php?id= --> B4
+    B4 --> B5 --> B6 --> C1
+```
 ---
 
 ## 📁 Estrutura do Projeto (Resumo)
