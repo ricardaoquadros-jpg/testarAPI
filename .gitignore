@@ -1,15 +1,66 @@
+# ============================================
+# ANDROID STUDIO - .gitignore PROFISSIONAL 2025
+# ============================================
+
+# ---- Build ----
+/build/
+/app/build/
+/captures/
+/outputs/
+
+# ---- Android Studio ----
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.gradle/
 local.properties
+
+# ---- Cache ----
+/.gradle
+/.gradle
+/caches/
+/**/build/
+
+# ---- Log Files ----
+*.log
+
+# ---- OS Files ----
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# ---- Keystore (NUNCA subir sua key privada) ----
+*.jks
+*.keystore
+
+# ---- Signing ----
+release.keystore
+release.jks
+signing.properties
+key.properties
+
+# ---- APK / AAB ----
+*.apk
+*.ap_
+*.aab
+
+# ---- IntelliJ / JetBrains ----
+*.iws
+*.ipr
+
+# ---- NDK ----
+obj/
+
+# ---- Gradle Wrapper ----
+/gradle/
+/gradlew
+/gradlew.bat
+
+# ---- Misc ----
+/navigation.json
+/workspace.xml
+/shelf/
+
+# ---- Generated ----
+app/src/androidTest/java/*/Generated*.java
+app/src/test/java/*/Generated*.java
