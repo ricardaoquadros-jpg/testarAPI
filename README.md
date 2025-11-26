@@ -106,35 +106,22 @@ flowchart TB
 ## 📁 Estrutura do Projeto (Resumo)
 
 testarAPI/
-
+```bash
 ├─ app/src/main/java/com/example/testarapi/
-
 │ ├─ MainActivity.java
-
 │ ├─ models/
-
 │ ├─ adapters/
-
 │ └─ utils/
-
 ├─ res/
-
 │ ├─ layout/
-
 │ │ ├─ activity_main.xml
-
 │ │ └─ item_lista.xml
-
 │ ├─ values/
-
 │ └─ drawable/
-
 ├─ AndroidManifest.xml
-
 ├─ build.gradle
-
 └─ README.md|
-
+```
 
 ---
 
